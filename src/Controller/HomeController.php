@@ -20,6 +20,7 @@ class HomeController extends AbstractController
     {
 
         $bus->dispatch(new SendEmailMessage("paul", "abodjekouamepaularnaud@gmail.com", "test"));
+        dd($bus);
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
